@@ -41,7 +41,7 @@ App = {
     let totalBet = contract.totalBet(function (err, result)  {
       if (!err) {
         result = web3.fromWei(result)
-        $("#total-bet").text(result.toNumber() + " ether")
+        $("#total-bet").text(result.toNumber() + " ETH")
       }
       else console.error(err);
     });

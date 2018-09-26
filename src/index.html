@@ -1,66 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Betting App</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-8 col-sm-push-2">
-          <h1 class="text-center">Betting App</h1>
-          <hr/>
-          <br/>
-          <div className="block">
-              <b>Number of bets:</b> &nbsp;
-              <span id="number-of-bets"></span>
-          </div>
 
-          <div className="block">
-              <b>Last winner number:</b> &nbsp;
-              <span id="last-winner-number"></span>
-          </div>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yolo Betting</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link href="css/index.css" rel="stylesheet">
+</head>
 
-          <div className="block">
-              <b>Total ether bet:</b> &nbsp;
-              <span id="total-bet">0 ether</span>
-          </div>
-
-          <div className="block">
-              <b>Bet Value:</b> &nbsp;
-              <span>1 ether</span>
-          </div>
-
-          <div className="block">
-              <b>All Slots:</b> &nbsp;
-              <span id="total-players"></span>
-          </div>
-
-          <hr />
-
-          <h3>Vote for the next number</h3>
-          <ul ref="numbers">
-              <li class="bet-number">1</li>
-              <li class="bet-number">2</li>
-              <li class="bet-number">3</li>
-              <li class="bet-number">4</li>
-              <li class="bet-number">5</li>
-              <li class="bet-number">6</li>
-              <li class="bet-number">7</li>
-              <li class="bet-number">8</li>
-              <li class="bet-number">9</li>
-              <li class="bet-number">10</li>
-           </ul>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="row text-center">
+          <img src="images/logo.png" alt="Yolo Betting"/>
         </div>
+        <hr />
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card-counter player">
+                <i class="fa fa-users"></i>
+                <span class="count-numbers" id="total-players"></span>
+                <span class="count-name"> All Slots</span>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card-counter last-winner">
+                <i class="fa fa-trophy"></i>
+                <span class="count-numbers" id="last-winner-number"></span>
+                <span class="count-name">Last Win Number</span>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card-counter bet-value">
+                <i class="fa fa-ticket-alt"></i>
+                <span class="count-numbers" id="number-of-bets"></span>
+                <span class="count-name">Number of Bets</span>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card-counter total-bet">
+                <i class="fab fa-ethereum"></i>
+                <span class="count-numbers" id="total-bet"></span>
+                <span class="count-name">Total Betted</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <h3 class="text-center">Let's vote for the next number (Price: 1 ETH)</h3>
+        </br>
+        </br>
+        <button type="button" class="btn bet-number btn-danger btn-circle btn-xl">1</button>
+        <button type="button" class="btn bet-number btn-danger btn-circle btn-xl">2</button>
+        <button type="button" class="btn bet-number btn-danger btn-circle btn-xl">3</button>
+        <button type="button" class="btn bet-number btn-danger btn-circle btn-xl">4</button>
+        <button type="button" class="btn bet-number btn-danger btn-circle btn-xl">5</button>
+        <button type="button" class="btn bet-number btn-danger btn-circle btn-xl">6</button>
+        <button type="button" class="btn bet-number btn-danger btn-circle btn-xl">7</button>
+        <button type="button" class="btn bet-number btn-danger btn-circle btn-xl">8</button>
+        <button type="button" class="btn bet-number btn-danger btn-circle btn-xl">9</button>
+        <button type="button" class="btn bet-number btn-danger btn-circle btn-xl">10</button>
       </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/web3.min.js"></script>
-    <script src="js/app.js"></script>
-  </body>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
 </html>
