@@ -123,6 +123,8 @@ src/
   css/
     boostrap.min.css
     index.css
+  images/
+    logo.png
   js/
     app.js
     boostrap.min.js
