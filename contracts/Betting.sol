@@ -6,16 +6,16 @@ contract Betting {
     uint public betValue = 1 ether;
     uint public totalBet;
     uint public numberOfBets;
-    uint public totalPlayers = 3;
-    address[] players;
+    uint public totalSlots = 3;
+    address[] public players;
 
     mapping(uint => address[]) public numberToPlayers;
     mapping(address => uint) public playerToNumber;
 
-    constructor (uint _betValue, uint _totalPlayers) public {
+    constructor (uint _betValue, uint _totalSlots) public {
         owner = msg.sender;
         if (_betValue > 0) betValue = _betValue;
-        if (_totalPlayers > 0) totalPlayers = _totalPlayers;
+        if (_totalSlots > 0) totalSlots = _totalSlots;
     }
 
     modifier validBet(uint betNumber) {
@@ -35,7 +35,7 @@ contract Betting {
         numberToPlayers[betNumber].push(msg.sender);
         numberOfBets += 1;
         totalBet += msg.value;
-        if(numberOfBets >= totalPlayers) {
+        if(numberOfBets >= totalSlots) {
             distributePrizes();
         }
     }

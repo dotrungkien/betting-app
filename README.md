@@ -16,6 +16,9 @@ truffle init
 ## Write contract & test & deploy on Remix IDE
 deployed contract address: 0x10760d4227c8c87161a3ef93e2c4c3b6b04b95e1
 
+### Install metamask
+[https://metamask.io/](https://metamask.io/)
+
 ### Create contract file
 create `Betting.sol` inside *contracts* folder and open it.
 
