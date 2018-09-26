@@ -43,7 +43,7 @@ contract Betting {
     function distributePrizes() internal {
         uint winnerNumber = generateRandomNumber();
         address[] memory winners = numberToPlayers[winnerNumber];
-        if (winners.length >= 0) {
+        if (winners.length > 0) {
             uint winnerEtherAmount = totalBet / winners.length;
             for (uint i = 0; i < numberToPlayers[winnerNumber].length; i++) {
                 numberToPlayers[winnerNumber][i].transfer(winnerEtherAmount);
@@ -69,5 +69,10 @@ contract Betting {
         players.length = 0;
         totalBet = 0;
         numberOfBets = 0;
+    }
+
+    function kill() public {
+        require(msg.sender == owner);
+        selfdestruct(owner);
     }
 }
